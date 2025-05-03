@@ -1,11 +1,562 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Rapid Hand 主页</title>
-</head>
-<body>
-  <h1>欢迎来到 Rapid Hand 的主页！</h1>
-  <p>这是一个通过 GitHub Pages 构建的网站。</p>
-</body>
+	<head>
+		<title>RAPID Hand: A Robust, Affordable, Perception-Integrated, Dexterous Manipulation Platform for Generalist Robot Autonomy</title>
+		<meta charset="utf-8" />
+		 <meta name="viewport" content="width=1000">
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LS6L6LB7RX"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-LS6L6LB7RX');
+		</script>
+
+		<meta property="og:url"           content="https://rapid-hand.github.io" />
+	    <meta property="og:type"          content="website" />
+	    <meta property="og:title"         content="RAPID Hand: A Robust, Affordable, Perception-Integrated, Dexterous Manipulation Platform for Generalist Robot Autonomy" />
+	    <meta property="og:description"   content="This paper addresses the scarcity of low-cost, robust, perception-integrated humanoid hands for learning contact-rich and dexterous robotic manipulation, a crucial capability for advancing ``General-Purpose Robots (GPRs)''. To bridge this gap, we present the RAPID Hand, the first affordable, fully-actuated humanoid hand, integrating well-aligned vision, touch, and proprioception to enhance embodied manipulation. The RAPID Hand is designed to balance affordability, robustness, and humanoid dexterity, integrating perception capabilities. Featuring a novel, direct-driven biomimetic finger structure that mirrors human hand kinematics, it achieves a fully actuated hand with 20 degrees of freedom (DoF) for exceptional dexterity and durability. Affordable to assemble and maintain, the RAPID Hand can be constructed at a rather low cost using 3D-printed components and widely available motors. Additionally, it incorporates a multimodal perception scheme, which includes well-aligned and synchronized vision, touch, and proprioception functionalities within the hardware. Built upon RAPID Hand, we learn skills to complete contact-rich, high-dexterity manipulation tasks such as object-in-hand translation and rolling, which are difficult to achieve without human-like dexterity and multi-modal information." />
+	    
+
+	</head>
+	<body id="top">
+
+
+		<!-- Main -->
+			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
+					<section id="four">
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 0% uniform" style="width: 100%; display: flex; justify-content: space-between;">
+								<!-- SYSU Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 24%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/institution/sysu_logo.png" alt="">
+									</span>
+								</div>
+								<!-- University of California, Merced Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 22%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/institution/University_of_Califronia_Merced_logo.png" alt="">
+									</span>
+								</div>
+								<!-- CASIA Logo -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+									<span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="images/institution/casia-logo.jpg" alt="">
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<h1 style="text-align: center; margin-bottom: 0; color: rgb(0, 72, 34); font-size: 300%">Rapid Hand Manipulation Platform</h1>
+						<h2 style="text-align: center; white-space: nowrap; font-size: 200%">A Robust, Affordable, Perception-Integrated, Dexterous Hand <br> for Generalist Robot Autonomy</h2>
+
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 50% uniform" style="width: 100%; color: black;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									Human Demonstration with UMI
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 66.67%">
+									Fully Autonomous Policy Rollout
+								</div>
+							</div>
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/teaser_data_collection_dish.mp4" type="video/mp4">	
+										</video>
+									</span>
+									<!-- Dish Washing Data Collection-->
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_dish_washing_1x_compressed.mp4" type="video/mp4">	
+										</video>
+										<div style="position: absolute; top: 2%; right: 1%">
+											<p style="color: white; text-align: center; font-size: 2em">1x</p>
+										</div>
+									</span>
+									<!-- Dish Washing -->
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_cloth_folding_1x_compressed.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; right: 1%">
+											<p style="color: white; text-align: center; font-size: 2em">1x</p>
+										</div>
+									</span>
+									<!-- Cloth Folding -->
+								</div>
+							</div>
+							<div class="row 50% uniform" style="width: 100%">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/teaser_data_collection_cup.mp4" type="video/mp4">	
+										</video>
+									</span>
+									<!-- Cup Arrangement Data Collection-->
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_cup_arrangement_1x_compressed.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; right: 1%">
+											<p style="color: white; text-align: center; font-size: 2em">1x</p>
+										</div>
+									</span>
+									<!-- Cup Arrangement -->
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit">
+										<video autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_dynamic_tossing_1x_compressed.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; right: 1%">
+											<p style="color: white; text-align: center; font-size: 2em">1x</p>
+										</div>
+									</span>
+									<!-- Dynamic Tossing -->
+								</div>
+							</div>
+						</div>
+								
+
+						<p style="color: black;">This paper addresses the scarcity of low-cost, robust, perception-integrated humanoid hands for learning contact-rich and dexterous robotic manipulation, a crucial capability for advancing ``General-Purpose Robots (GPRs)''. To bridge this gap, we present the RAPID Hand, the first affordable, fully-actuated humanoid hand, integrating well-aligned vision, touch, and proprioception to enhance embodied manipulation. The RAPID Hand is designed to balance affordability, robustness, and humanoid dexterity, integrating perception capabilities. Featuring a novel, direct-driven biomimetic finger structure that mirrors human hand kinematics, it achieves a fully actuated hand with 20 degrees of freedom (DoF) for exceptional dexterity and durability. Affordable to assemble and maintain, the RAPID Hand can be constructed at a rather low cost using 3D-printed components and widely available motors. Additionally, it incorporates a multimodal perception scheme, which includes well-aligned and synchronized vision, touch, and proprioception functionalities within the hardware. Built upon RAPID Hand, we learn skills to complete contact-rich, high-dexterity manipulation tasks such as object-in-hand translation and rolling, which are difficult to achieve without human-like dexterity and multi-modal information.
+						</p>
+		
+						<hr>
+						<h3>Paper</h3>
+						<p style="margin-bottom: 0em;">
+							<!-- Latest version: <a href="umi.pdf">here</a>. -->
+							Latest version: <a href="https://rapid-hand.github.io">arXiv</a> or <a href="umi.pdf">here</a>.
+							<!-- <br>Robotics: Science and Systems (RSS) 2024<br> -->
+						</p>
+						<!-- <p style="margin-bottom: 1em; color: #4e79a7">★ Best Systems Paper Award Finalist, RSS ★</p> -->
+						<!-- <div class="12u$"><a href="umi.pdf"><span class="image fit" style="border: 1px solid; border-color: #888888;"><img src="images/umi_thumbnail.png" alt="" /></span></a></div> -->
+
+						
+						<h3>Code and Tutorial</h3>
+
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="https://github.com/real-stanford/universal_manipulation_interface">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/github_logo.svg" alt=""/>
+										</span>
+										Codebase
+									</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?usp=sharing">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/build.svg" alt=""/>
+										</span>
+										Hardware Guide
+									</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 10%">
+									<a href="https://swanky-sphere-ad1.notion.site/UMI-Data-Collection-Tutorial-4db1a1f0f2aa4a2e84d9742720428b4c?pvs=4">
+										<span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/documentation.svg" alt=""/>
+										</span>
+										Data Collection Instruction
+									</a>
+								</div>
+							<!-- </div> -->
+						<!-- </div>
+
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;"> -->
+							<!-- <div class="row 50% uniform" style="width: 100%;"> -->
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 30%;">
+									<span style="margin-bottom: 0.5em;">
+										<iframe height=20% src="https://www.youtube.com/embed/EJmAg1Bnp-k?si=c5q8eiYyuAao3opy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<br>
+									<a href="https://youtu.be/EJmAg1Bnp-k?si=24dVkyAtTY2MHnLp">3D Printing Tutorial</a>
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 7%">
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 30%">
+									<span style="margin-bottom: 0.5em;">
+										<iframe src="https://www.youtube.com/embed/x3ko0v_xwpg?si=0cXzjI4zI8P9UDxd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</span>
+									<br>
+									<a href="https://youtu.be/x3ko0v_xwpg?si=cQnTKZEktMx3oPpf">Assembly Tutorial</a>
+								</div>
+							</div>
+						</div>
+						
+						<hr>
+						<h3>Team</h3>
+						<section>
+							<div class="box alt" style="margin-bottom: 1em;">
+								<div class="row 50% uniform" style="width: 100%">
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://cheng-chi.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/cheng_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Cheng Chi<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://zhenjiaxu.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/zhenjia_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Zhenjia Xu<sup>*1,2</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://chuerpan.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/chuer_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Chuer Pan<sup>1</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.eacousineau.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/eric_thumbnail.png" alt="" style="border-radius: 50%;" /></span>Eric Cousineau<sup>3</sup></a></div>
+									
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="http://www.benburchfiel.com/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/benjamin_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Benjamin Burchfiel<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://www.cs.cmu.edu/~sfeng/"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/siyuan_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Siyuan Feng<sup>3</sup></a></div>
+											
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%">
+										<a href="https://groups.csail.mit.edu/locomotion/russt.html"><span class="image fit" style="margin-bottom: 0.5em;">
+											<img src="images/russ_thumbnail.jpg" alt="" style="border-radius: 50%;" /></span>Russ Tedrake<sup>3</sup></a></div>
+
+									<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 12.5%"
+									><a href="https://shurans.github.io/"><span class="image fit" style="margin-bottom: 0.5em;">
+										<img src="images/shuran_thumbnail.jpeg" alt="" style="border-radius: 50%;" /></span>Shuran Song<sup>1,2</sup></a></div>
+									
+								</div>
+							</div>
+						</section>
+						<p>
+							<sup>1</sup> Stanford University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>2</sup> Columbia University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<sup>3</sup> Toyota Research Institute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<!-- <sup>4</sup> MIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+							<sup>*</sup> Indicates equal contribution
+						</p>
+				
+						<h3>BibTeX</h3>
+						<pre><code>@inproceedings{chi2024universal,
+	title={Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots},
+	author={Chi, Cheng and Xu, Zhenjia and Pan, Chuer and Cousineau, Eric and Burchfiel, Benjamin and Feng, Siyuan and Tedrake, Russ and Song, Shuran},
+	booktitle={Proceedings of Robotics: Science and Systems (RSS)},
+	year={2024}
+}</code></pre>
+					
+						<hr>
+						<h3>Hardware Design</h3>
+						<b>How can we capture sufficient information for a wide variety of tasks with just a wrist-mounted camera?</b>
+						<br>
+						UMI’s data collection hardware takes the form of a hand-held parallel jaw gripper, mounted with a GoPro camera ①.
+						<br>
+						To gather policy-deployable observations, UMI needs to capture sufficient visual context to infer action ② and critical information like depth ③.
+						<br>
+						To obtain action data leading to deployable policies, UMI needs to capture precise robot action under fast human motion ④, 
+						fine adjustments on griping width ⑤, and automatically check whether each demonstration is valid under the specific robot kinematic constraints ⑥.
+						<div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
+							<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+								<span class="image fit">
+									<img src="images/UMI_hardware.jpg" alt="">
+								</span>
+							</div>
+						</div>
+·
+						<hr>
+						<h3>Policy Robustness</h4>
+						Enabled by our unique wrist-only camera setup and camera-centric action representations, UMI is 100% calibration-free (functioning even with base movement) and robust against distractors and drastic lighting changes.
+						<div class="box alt" style="margin-bottom: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/robustness_move_base.mp4" type="video/mp4"> </video>
+									</span>
+									Robot Base Movements
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/robustness_light_with_gopro.mp4" type="video/mp4"> </video>
+									</span>
+									Different Lighting Conditions
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/robustness_sauce.mp4" type="video/mp4"> </video>
+									</span>
+									Perturbations with Other Sauce
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						<h3>Capability Experiments</h3>
+						
+						<h4>(1) Dynamic Tossing &#129342; </h4>
+						<u><b>Task</b></u> The robot is tasked to sort 6 objects by tossing them to the corresponding bin. The 3 spherical objects (baseball &#9918;, orange &#127818;, apple &#127822;) should be tossed into the round bin, while the 3 Lego Duplo pieces go into the rectangular bin.
+						<!-- <br>
+						<u><b>Capability</b></u> It demonstrates UMI’s ability to capture and transfer fluid and rapid human motions, precise hand-eye coordination (between RGB and propriocep- tion) and timing alignment (between robot and gripper). -->
+						<br>
+						<u><b>Ablation</b></u> Without inference-time observation and action latency matching, the policy exhibits significantly more jittery movements, due to the misalignment between observations and action executions.
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/task_dynamic_tossing.mp4" type="video/mp4">
+										</video>
+									</span>
+									Ours
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_tossing_no_latency_matching.mp4" type="video/mp4"> </video>
+									</span>
+									No Latency Matching
+								</div>
+							</div>
+						</div>
+
+						<h4>(2) Cup Arrangement &#9749; </h4>
+						<u><b>Task</b></u> Pick up and place an espresso cup on the saucer with its handle facing to the left of the robot.
+						<!-- <br>
+						<u><b>Capability</b></u> This task tests the system’s ability to learn both prehensile (pick and place) and non-prehensile actions (i.e., pushing to reorientate the cup). It also tests UMI's capability of learning multi-modal action distributions and sense relative depth through monocular camera observation and side mirrors. -->
+						<br>
+						<u><b>Ablation</b></u> Data collected by UMI is robot agnostic. Here we can deploy the same policy on both UR5e and Franka robots. In fact, you can deploy it on any robot equipped with a parallel jaw stroke > 85mm.
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_cup_ur5.mp4" type="video/mp4"> </video>
+									</span>
+									Ours (UR5)
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_cup_franka.mp4" type="video/mp4"> </video>
+									</span>
+									Ours (Franka)
+								</div>
+								
+								<!-- <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_cup_abs_action_crop.mp4" type="video/mp4"> </video>
+									</span>
+									Absolute Action
+								</div> -->
+							</div>
+						</div>
+						
+						<h4>(3) Bimanual Cloth Folding &#128090; </h4>
+						<u><b>Task</b></u> Two robot arms need to coordinate and fold the sweater’s sleeves inward, then fold up the bottom hem, rotate 90 degrees, and finally fold the sweater in half again.
+						<!-- <br>
+						<u><b>Capability</b></u> It tests UMI’s ability to synchronize two-arm coordination. -->
+						<br>
+						<u><b>Ablation</b></u> Without inter-gripper proprioception (relative pose between the two grippers), the coordination between the two arms is significantly worse.
+						<!-- For example, when the two arms lift the bottom hem of the shirt, it often misses one of the grasps due to asynchronous grasp actions. -->
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_cloth_folding.mp4" type="video/mp4"> </video>
+									</span>
+									Ours
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_cloth_no_rel.mp4" type="video/mp4"> </video>
+									</span>
+									No Inter-gripper Proprioception
+								</div>
+							</div>
+						</div>
+
+
+						<h4>(4) Dish Washing &#127869; </h4>
+						<u><b>Task</b></u> For successful dish washing, the robots need to sequentially execute 7 dependent actions: turn on faucet, grasp plate, pick up sponge, wash and wipe plate until ketchups are removed, place plate, place the sponge and turn off faucet.
+						<!-- <br>
+						<u><b>Capability</b></u> It is an ultra-long horizon task, involving complex fluid (i.e., ketchup), deformable tool (i.e., sponge), and constrained articulated object (i.e., faucet). The policy also need to be semantically robust to the concept of “cleanliness”.  -->
+						<br>
+						<u><b>Ablation</b></u> The baseline policy trained with ResNet-34 as vision encoder, yielded non-reactive behaviors towards variations in plate or sponge position.
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/task_dish_washing.mp4" type="video/mp4"> </video>
+									</span>
+									Ours (CLIP-pretrained ViT as Vision Encoder)
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/comparison_dish_resnet.mp4" type="video/mp4"> </video>
+									</span>
+									ResNet as Vision Encoder
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						<h3>In-the-wild Generalization Experiments</h3>
+						With UMI, you can go to any home, any restaurant and start data collection within 2 minutes.
+						<!-- The demonstrations involved 15 espresso cups of different colors, shapes, and materials. -->
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/in_the_wild_cup_data_collection.mp4" type="video/mp4"> </video>
+									</span>
+									Human Data Collection
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/in_the_wild_cup_data_overview.mp4" type="video/mp4"> </video>
+									</span>
+									Data Overview
+								</div>
+							</div>
+						</div>
+
+						With a diverse in-the-wild cup manipulation dataset, UMI enabled us to train a diffusion policy that generalizes to extremely out-of-distribution objects and environments, even including serving expresso cup on top of a water fountain!
+
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/in_the_wild_cup_eval.mp4" type="video/mp4"> </video>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/in_the_wild_cup_all.mp4" type="video/mp4"> </video>
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+						<h3>Data Collection Methods</h3>
+						Thanks to its portablity and intuitive design, UMI allows for &#9889; fast data collection at a rate of 30 seconds/demonstration.
+				        <h4>Comparison with Other Methods</h4>
+						For the cup arrangement task, UMI gripper is over 3× faster than teleportation, reaching 48% of human hand speed.
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_cup_umi_crop.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; left: 2%">
+											<p style="color: black; text-align: center; font-size: 1em">111/h</p>
+										</div>
+									</span>
+									UMI Gripper
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_cup_hand_crop.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; left: 2%">
+											<p style="color: black; text-align: center; font-size: 1em">231/h</p>
+										</div>
+									</span>
+									Human Hand
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_cup_teleop_crop.mp4" type="video/mp4">
+										</video>
+										<div style="position: absolute; top: 2%; left: 2%">
+											<p style="color: black; text-align: center; font-size: 1em">35/h</p>
+										</div>
+									</span>
+									Teleoperation via Space Mouse
+								</div>
+							</div>
+						</div>
+						<h4>Human Demonstration on Other Tasks Using UMI Gripper</h4>
+
+						<div class="box alt" style="margin-bottom: 1em; margin-top: 1em;">
+							<div class="row 50% uniform" style="width: 100%;">
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_tossing_crop.mp4" type="video/mp4">
+										</video>
+									</span>
+									Dynamic Tossing
+								</div>
+								
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_cloth_crop.mp4" type="video/mp4">
+										</video>
+									</span>
+									Cloth Folding
+								</div>
+
+								<div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.3%">
+									<span class="image fit" style="margin-bottom: 0.5em;">
+										<video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;">
+											<source src="videos/throughput_dish_crop.mp4" type="video/mp4">
+										</video>
+									</span>
+									Dish Washing
+								</div>
+							</div>
+						</div>
+
+						<hr>
+				        <h3>Acknowledgements</h3>
+				        <p>This work was supported in part by the Toyota Research Institute, NSF Award #2037101, and #2132519. We want to thank Google and TRI for the UR5 robots, and IRIS and IPRL lab for the Franka robot hardware. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of the sponsors.</p>
+						<p>We would like to thank Andy Zeng, Pete Florance, Huy Ha, Yihuai Gao, Samir Gadre, Mandi Zhao, Mengda Xu, Alper Canberk, Kevin Zakka, Zeyi Liu, Dominik Bauer, Tony Zhao, Zipeng Fu and Lucy Shi for their thoughtful discussions. We thank Alex Alspach, Brandan Hathaway, Aimee Goncalves, Phoebe Horgan, and Jarod Wilson for their help on hardware design and prototyping. We thank Naveen Kuppuswamy, Dale McConachie, and Calder Phillips-Graffine for their help on low-level controllers. We thank John Lenard, Frank Michel, Charles Richter, and Xiang Li for their advice on SLAM. We thank Eric Dusel, Nwabisi C., and Letica Priebe Rocha for their help on the MoCap dataset collection. We thank Chen Wang, Zhou Xian, Moo Jin Kim, and Marion Lepert for their assistance with the Franka setup. We especially thank Steffen Urban for his open-source projects on GoPro SLAM and Camera-IMU calibration, and John @ 3D printing world for inspiration of the gripper mechanism.</p>
+						
+						<h3>Contact</h3>
+				        <p>If you have any questions, please feel free to contact <a href="http://cheng-chi.github.io/">Cheng Chi</a> and <a href="https://zhenjiaxu.com/">Zhenjia Xu</a>.</p>
+						
+					</section>
+
+					
+			</div>
+
+			<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
