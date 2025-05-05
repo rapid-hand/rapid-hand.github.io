@@ -1,1 +1,1 @@
-Universal Manipulation Interface: In-The-Wild Robot Teaching Without In-The-Wild Robots
+RAPID Hand: A Robust, Affordable, Perception-Integrated, Dexterous Manipulation Platform for Generalist Robot Autonomy
