@@ -23,7 +23,24 @@
 	<meta property="og:title"
 		content="RAPID Hand: A Robust, Affordable, Perception-Integrated, Dexterous Manipulation Platform for Generalist Robot Autonomy" />
 	<meta property="og:description"
-		content="This paper addresses the scarcity of low-cost, robust, perception-integrated humanoid hands for learning contact-rich and dexterous robotic manipulation, a crucial capability for advancing ``General-Purpose Robots (GPRs)''. To bridge this gap, we present the RAPID Hand, the first affordable, fully-actuated humanoid hand, integrating well-aligned vision, touch, and proprioception to enhance embodied manipulation. The RAPID Hand is designed to balance affordability, robustness, and humanoid dexterity, integrating perception capabilities. Featuring a novel, direct-driven biomimetic finger structure that mirrors human hand kinematics, it achieves a fully actuated hand with 20 degrees of freedom (DoF) for exceptional dexterity and durability. Affordable to assemble and maintain, the RAPID Hand can be constructed at a rather low cost using 3D-printed components and widely available motors. Additionally, it incorporates a multimodal perception scheme, which includes well-aligned and synchronized vision, touch, and proprioception functionalities within the hardware. Built upon RAPID Hand, we learn skills to complete contact-rich, high-dexterity manipulation tasks such as object-in-hand translation and rolling, which are difficult to achieve without human-like dexterity and multi-modal information." />
+		content="This paper addresses the scarcity of low-cost but
+				high-dexterity platforms for collecting real-world multi-fingered robot manipulation data towards
+				generalist robot autonomy.
+				To achieve it, we propose the RAPID Hand, a co-optimized hardware and software platform where the
+				compact 20-DoF hand, robust whole-hand perception, and high-DoF teleoperation interface are jointly
+				designed.
+				Specifically, RAPID Hand adopts a compact and practical hand ontology and a hardware-level perception
+				framework that stably integrates wrist-mounted vision, fingertip tactile sensing, and proprioception
+				with sub-7 ms latency and spatial alignment.
+				Collecting high-quality demonstrations on high-DoF hands is challenging, as existing teleoperation
+				methods struggle with precision and stability on complex multi-fingered systems.
+				We address this by co-optimizing hand design, perception integration, and teleoperation interface
+				through a universal actuation scheme, custom perception electronics, and two retargeting constraints. We
+				evaluate the platform’s hardware, perception, and teleoperation interface. Training a diffusion policy
+				on collected data shows superior performance over prior works, validating the system’s capability for
+				reliable, high-quality data collection.
+				The platform is constructed from low-cost and off-the-shelf components and will be made public to ensure
+				reproducibility and ease of adoption." />
 
 
 </head>
@@ -72,7 +89,7 @@
 				for Generalist Robot Autonomy
 			</h2>
 
-			<!-- teaser image -->
+			<!-- teaser image
 			<div class="box alt" style="margin-bottom: 1em;">
 				<div class="row 50% uniform" style="width: 100%; text-align: center;">
 					<div style="width: 100%;">
@@ -81,29 +98,63 @@
 						</span>
 					</div>
 				</div>
-			</div>
+			</div> -->
+
+			<div style="height: 30px;"></div>
 
 			<!-- abstract -->
-			<p style="color: black; text-align: justify;">This paper addresses the scarcity of low-cost but
-				high-dexterity platforms for collecting real-world multi-fingered robot manipulation data towards
-				generalist robot autonomy.
-				To achieve it, we propose the RAPID Hand, a co-optimized hardware and software platform where the
-				compact 20-DoF hand, robust whole-hand perception, and high-DoF teleoperation interface are jointly
-				designed.
-				Specifically, RAPID Hand adopts a compact and practical hand ontology and a hardware-level perception
-				framework that stably integrates wrist-mounted vision, fingertip tactile sensing, and proprioception
-				with sub-7 ms latency and spatial alignment.
-				Collecting high-quality demonstrations on high-DoF hands is challenging, as existing teleoperation
-				methods struggle with precision and stability on complex multi-fingered systems.
-				We address this by co-optimizing hand design, perception integration, and teleoperation interface
-				through a universal actuation scheme, custom perception electronics, and two retargeting constraints. We
-				evaluate the platform’s hardware, perception, and teleoperation interface. Training a diffusion policy
-				on collected data shows superior performance over prior works, validating the system’s capability for
-				reliable, high-quality data collection.
-				The platform is constructed from low-cost and off-the-shelf components and will be made public to ensure
-				reproducibility and ease of adoption.
-			</p>
+			<h2 style="
+				font-size: 32px; 
+				font-weight: 700; 
+				text-align: center; 
+				margin-bottom: 30px; 
+				color: #2c3e50;
+				border-bottom: 0.5px solid #ddd;
+				padding-bottom: 10px;
+				letter-spacing: 1px;
+			">
+				Abstract
+			</h2>
+			<div style="max-width: 760px; margin: 0 auto;">
+				<p style="color: black; text-align: justify;font-size: 18px; line-height: 1.7;">This paper addresses the scarcity of low-cost but
+					high-dexterity platforms for collecting real-world multi-fingered robot manipulation data towards
+					generalist robot autonomy.
+					To achieve it, we propose the RAPID Hand, a co-optimized hardware and software platform where the
+					compact 20-DoF hand, robust whole-hand perception, and high-DoF teleoperation interface are jointly
+					designed.
+					Specifically, RAPID Hand adopts a compact and practical hand ontology and a hardware-level perception
+					framework that stably integrates wrist-mounted vision, fingertip tactile sensing, and proprioception
+					with sub-7 ms latency and spatial alignment.
+					Collecting high-quality demonstrations on high-DoF hands is challenging, as existing teleoperation
+					methods struggle with precision and stability on complex multi-fingered systems.
+					We address this by co-optimizing hand design, perception integration, and teleoperation interface
+					through a universal actuation scheme, custom perception electronics, and two retargeting constraints. We
+					evaluate the platform’s hardware, perception, and teleoperation interface. Training a diffusion policy
+					on collected data shows superior performance over prior works, validating the system’s capability for
+					reliable, high-quality data collection.
+					The platform is constructed from low-cost and off-the-shelf components and will be made public to ensure
+					reproducibility and ease of adoption.
+				</p>
 
+				<!-- Intro Video -->
+				<div style="max-width: 900px; margin: 40px auto; position: relative; padding-top: 60%; border-radius: 15px; overflow: hidden;">
+					<video 
+						style="
+							position: absolute; 
+							top: 0; left: 0; 
+							width: 100%; 
+							height: 100%; 
+							object-fit: cover; 
+							object-position: center;
+						" 
+						poster="" autoplay controls>
+						<source src="videos/teaser_demo.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+
+			</div>
+			
 			<hr>
 			<h3>Paper</h3>
 			<p style="margin: 0 0 1.8em 0; line-height: 1.4;">
